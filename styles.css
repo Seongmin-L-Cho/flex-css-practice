@@ -1,0 +1,17 @@
+/*  box -> 한개 박스. 옆에 아무것도 못옴 / inline-box : 한줄 박스 / inline - 한줄 element. width, display 안먹힘*/
+
+.wrapper {
+  display: flex;
+  justify-content: space-around; /*flex box 조정 center면 중앙에 배치되는 식. main-axis에 종속*/
+  align-items: stretch; /* cross-axis에 종속 디폴트는 flex start*/
+  height: 100vh;
+}
+/* flex container 사용법 - div 를 감싸는 display : flex */
+/* flex -direction : flex 내부 박스들의 정렬. 기본은 row(가로) */
+/* main axis -> flex -direction 가 row일 때 가로 . cross-axis는 세로*/
+.box {
+  width: 200px;
+  height: 200px;
+  background: peru;
+  color: white;
+}
