@@ -17,8 +17,7 @@
 */
 
 .child {
-  width: 200px;
-  height: 200px;
+  flex-basis: 300px;
   background: peru;
   color: white;
   display: flex;
@@ -26,7 +25,7 @@
   justify-content: center;
   font-size: 50px;
 }
-
+/* flex-basis : 처음 시작 크기. shrink 등이 일어나기 전의 크기. main-axis에 적용.*/
 /*align self 는 align-items랑 비슷한 거지만(cross-axis), 하나에만 영향을 미침*/
 /*order : 순서 조정. html을 못건드릴 경우 사용할수 있다 기본은 0. 앞뒤의 order와 비교해서 순서를 맞춘다*/
 /*flex-shrink : 기본은 1. 2가 되면 지정 안된 부분 보다 2배 많이 찌그러짐. 3이면 3배. 
