@@ -25,8 +25,8 @@ body {
 .grid {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: [first-line] 100px [second-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line];
+  grid-template-rows: repeat(4, 100px [sexy-line]);
 }
 
 /* grid는 vertical 이 기본. 기본일떄는 column 이 가로다*/
@@ -34,7 +34,7 @@ body {
 /* 하지만 grid-template-areas를 적용하지 않은 상태에서 auto 200px은 단순히 row가 2개이고, 첫번째 그리드의 width는 될수 있는 한 최대로 생기고, 두번째 그리드의 width는 200고정이다 */
 /* repeat : 같은걸 반복해서 사용해서 만들때 아주 편함 */
 /* grid-template-areas: 레이아웃 만들기. 레이아웃이 어떻게 보여야하는지 지정 가능.*/
-
+/*  grid-template-columns: [first-line] 100px  라인 이름 부여 */
 .header {
   background-color: #2ecc71;
   grid-column: span 4;
@@ -47,8 +47,8 @@ body {
 /* span의 경우 같은 라인에 2개 요소가 있을 때는 starting 포인트가 필요해서 그냥 sapn 4 로는 불가능*/
 .content {
   background-color: #3498db;
-  grid-column: 1 /-2;
-  grid-row: 2 / span 2;
+  grid-column: first-line / fourth-line;
+  grid-row: sexy-line 1 / sexy-line 3;
 }
 
 /* grid-row / grid-column을 사용해서 순서를 바꿀수도 있다. */
