@@ -28,8 +28,11 @@ body {
   height: 250vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-  place-content: end center;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
 
+  /* grid-auto-row/column -> 지정 하지 않은 더 초과한 elements이 있을 경우 알아서 값을 부여한다 initial 을 초과 했을 때 작동 */
+  /* grid-auto-flows는 늘어날 elements가 뭔지 지정한다 기본은 row가 늘어남*/
   /* grid-template:
     "header header header header" 1fr
     [content-start] "content content content nav" 2fr [content-end]
@@ -46,6 +49,13 @@ body {
 /* grid-template-areas: 레이아웃 만들기. 레이아웃이 어떻게 보여야하는지 지정 가능.*/
 /*  grid-template-columns: [first-line] 100px  라인 이름 부여 후 100px 지정.   grid-template-rows: repeat(4, 100px [sexy-line]); 식으로 부여도 가능함*/
 /* grid-template 에는 refeat 사용 불가 */
+
+.item:nth-child(even) {
+  background-color: #3498db;
+}
+.item:nth-child(odd) {
+  background-color: #2ecc71;
+}
 .header {
   background-color: #2ecc71;
   grid-area: header;
