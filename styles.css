@@ -25,10 +25,10 @@ body {
 .grid {
   display: grid;
   gap: 10px;
-  height: 50vh;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  place-items: stretch center;
+  height: 250vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  place-content: end center;
 
   /* grid-template:
     "header header header header" 1fr
@@ -36,6 +36,7 @@ body {
     "footer footer footer footer " 1fr / 1fr 1fr 1fr 1fr; 
     높이 / 넓이 */
 }
+/* items -> 그리드 한칸 / content -> 그리드 전체(그렇다고 grid container를 움직인다는건 아니고 그 안의 그리드 집합체들 */
 /*align items 세로 / justify-items 가로 / place-itmes : XX XX 형식으로 align & justify 통합. 첫번째가 수직 두번째가 수평*/
 /* fr : 가질 수 있는 공간 만큼 차지하게 지정. 1grid container 기반. 공간이 없으면 안 나타난다. */
 /* grid는 vertical 이 기본. 기본일떄는 column 이 가로다*/
