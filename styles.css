@@ -26,11 +26,17 @@ body {
   display: grid;
   gap: 10px;
   height: 50vh;
-  grid-template:
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: stretch center;
+
+  /* grid-template:
     "header header header header" 1fr
     [content-start] "content content content nav" 2fr [content-end]
-    "footer footer footer footer " 1fr / 1fr 1fr 1fr 1fr; /* 높이 / 넓이 */
+    "footer footer footer footer " 1fr / 1fr 1fr 1fr 1fr; 
+    높이 / 넓이 */
 }
+/*align items 세로 / justify-items 가로 / place-itmes : XX XX 형식으로 align & justify 통합. 첫번째가 수직 두번째가 수평*/
 /* fr : 가질 수 있는 공간 만큼 차지하게 지정. 1grid container 기반. 공간이 없으면 안 나타난다. */
 /* grid는 vertical 이 기본. 기본일떄는 column 이 가로다*/
 /* GRID-TEMPLATE-AREAS를 4*4로 만들어 놓았다고 가정했을 때, auto 200px 는 두번째 GRID만 200px 적용이고 나머지 1, 3,4 그리드 들은 auto로 되서 auto 200px auto auto 이렇게 적용이 된다. */
@@ -38,6 +44,7 @@ body {
 /* repeat : 같은걸 반복해서 사용해서 만들때 아주 편함 */
 /* grid-template-areas: 레이아웃 만들기. 레이아웃이 어떻게 보여야하는지 지정 가능.*/
 /*  grid-template-columns: [first-line] 100px  라인 이름 부여 후 100px 지정.   grid-template-rows: repeat(4, 100px [sexy-line]); 식으로 부여도 가능함*/
+/* grid-template 에는 refeat 사용 불가 */
 .header {
   background-color: #2ecc71;
   grid-area: header;
