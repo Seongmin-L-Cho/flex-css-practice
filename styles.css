@@ -26,11 +26,11 @@ body {
   display: grid;
   gap: 10px;
   height: 250vh;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
   grid-template-rows: repeat(4, 100px);
-  grid-auto-flow: column;
   grid-auto-columns: 100px;
 
+  /* minmax : element 의 최소 최대치 필요할 때 사용 */
   /* grid-auto-row/column -> 지정 하지 않은 더 초과한 elements이 있을 경우 알아서 값을 부여한다 initial 을 초과 했을 때 작동 */
   /* grid-auto-flows는 늘어날 elements가 뭔지 지정한다 기본은 row가 늘어남*/
   /* grid-template:
