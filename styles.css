@@ -26,9 +26,11 @@ body {
   color: white;
   display: grid;
   gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
   grid-auto-rows: 100px;
   margin-bottom: 30px;
 
+  /* max-content : box가 컨텐츠가 필요한 만큼 커짐/ min-content : box가 컨텐츠가 완전히 망가지지 않는 한도내에서 작아짐 */
   /* minmax : element 의 최소 최대치 필요할 때 사용 / auto fit 과 auto fill  */
   /* grid-auto-row/column -> 지정 하지 않은 더 초과한 elements이 있을 경우 알아서 값을 부여한다 initial 을 초과 했을 때 작동 */
   /* grid-auto-flows는 늘어날 elements가 뭔지 지정한다 기본은 row가 늘어남*/
@@ -56,14 +58,16 @@ body {
   background-color: #2ecc71;
 }
 
-.grid:first-child {
+/* .grid:first-child {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 
 .grid:last-child {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-/* auto-fill : 해당 row를 채움. column이 비더라도 일단 채우긴 한다 /auto-fit : 쭉 늘려서 꽉채운다 row에 fit 하게 */
+} */
+/* auto-fill : 해당 row를 채움. column이 비더라도 일단 채우긴 한다 엘리먼트 갯수는 잘 모를때 쓰기좋음 /auto-fit : 쭉 늘려서 꽉채운다 row에 fit 하게
+ 
+*/
 .header {
   background-color: #2ecc71;
   grid-area: header;
