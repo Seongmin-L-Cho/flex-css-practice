@@ -1,0 +1,10 @@
+@mixin link($word) {
+  // mixin - argument를 보낼수 있게 한다
+  text-decoration: none;
+  display: block;
+  @if $word == "odd" {
+    color: blue;
+  } @else {
+    color: red;
+  }
+}
