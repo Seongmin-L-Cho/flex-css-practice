@@ -1,17 +1,27 @@
-@import "_potato";
-@import "_mixins";
-
+@import "_button";
 a {
-  margin-bottom: 10px;
+  @extend %button;
 }
 
-a:nth-child(odd) {
-  @include link("odd");
+button {
+  @extend %button;
+  border: none;
 }
 
-a:nth-child(even) {
-  @include link("even");
-}
+// @import "_potato";
+// @import "_mixins";
+
+// a {
+//   margin-bottom: 10px;
+// }
+
+// a:nth-child(odd) {
+//   @include link("odd");
+// }
+
+// a:nth-child(even) {
+//   @include link("even");
+// }
 
 // h2 {
 //   color: $bg;

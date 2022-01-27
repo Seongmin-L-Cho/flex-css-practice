@@ -1,5 +1,5 @@
 @mixin link($word) {
-  // mixin - argument를 보낼수 있게 한다
+  // mixin - argument를 보낼수 있게 한다. 상황에 다르게 쓰고 싶을 떄 사용
   text-decoration: none;
   display: block;
   @if $word == "odd" {

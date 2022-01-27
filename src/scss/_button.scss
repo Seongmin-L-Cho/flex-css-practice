@@ -1,0 +1,11 @@
+%button {
+  font-family: inherit;
+  border-radius: 7px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: peru;
+  color: white;
+  font-weight: 500;
+}
+// extends : 코드 확장. 페이지에서 분리해야하는 엘리먼트들이 많을 때 유용하다, 버튼 타이틀 네비게이션 등..
