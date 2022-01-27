@@ -1,6 +1,26 @@
-body {
-  background: peru;
-  a {
+@import "_potato";
+
+h2 {
+  color: $bg;
+}
+
+// .box h2 {
+//   color: blue;
+// } 이게 하단으로 바뀐다
+
+.box {
+  margin-top: 20px;
+  &:hover {
+    background-color: green;
+  }
+  h2 {
+    // nesting
     color: blue;
+    &:hover {
+      color: red;
+    }
+  }
+  button {
+    color: red;
   }
 }
