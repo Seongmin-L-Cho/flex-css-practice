@@ -1,0 +1,53 @@
+@import "_mixins";
+h1 {
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
+  }
+  @include responsive("iphone-l") {
+    font-size: 300px;
+  }
+  @include responsive("tablet") {
+    color: green;
+  }
+}
+
+// @import "_potato";
+// @import "_mixins";
+
+// a {
+//   margin-bottom: 10px;
+// }
+
+// a:nth-child(odd) {
+//   @include link("odd");
+// }
+
+// a:nth-child(even) {
+//   @include link("even");
+// }
+
+// h2 {
+//   color: $bg;
+// }
+
+// // .box h2 {
+// //   color: blue;
+// // } 이게 하단으로 바뀐다
+
+// .box {
+//   margin-top: 20px;
+//   &:hover {
+//     background-color: green;
+//   }
+//   h2 {
+//     // nesting
+//     color: blue;
+//     &:hover {
+//       color: red;
+//     }
+//   }
+//   button {
+//     color: red;
+//   }
+// }
